@@ -5,7 +5,7 @@ authors = ["Enigma <support@enigma.co>"]
 build = "build.rs"
 
 [dependencies]
-enigma-tools-u = {path = "../../enigma-tools-u"}
+enigma-tools-u = { path = "../../enigma-tools-u" }
 enigma-types = { path = "../../enigma-types" }
 enigma-crypto = { path = "../../enigma-crypto" }
 futures = { version = "0.1.25", default-features = false }
@@ -22,10 +22,9 @@ rocksdb = { version = "0.12.1", default-features = false }
 lazy_static = "1.2.0"
 lru-cache = "0.1.1"
 log = "0.4.6"
-log-derive = "0.2"
+log-derive = "0.3"
 simplelog = "0.5.3"
 structopt = "0.2"
-
 
 sgx_types = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.4" }
 sgx_urts = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.4" }
