@@ -1,15 +1,10 @@
-pub mod integration_utils;
 
 use integration_utils::{run_core, full_simple_deployment, deploy_and_compute_few_contracts,
                         conn_and_call_ipc, get_msg_format_with_input, get_get_tips_msg, get_delta_msg,
                         get_deltas_msg, get_simple_msg_format, decrypt_delta_to_value, is_hex};
-pub extern crate enigma_core_app as app;
-extern crate serde;
-extern crate rustc_hex as hex;
-
-use self::app::serde_json;
+use app::serde_json;
 use app::serde_json::*;
-use hex::{ToHex, FromHex};
+use rustc_hex::{ToHex, FromHex};
 
 #[test]
 fn test_ipc_get_tip() {

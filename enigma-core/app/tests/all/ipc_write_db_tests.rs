@@ -1,16 +1,10 @@
-pub mod integration_utils;
 
 use integration_utils::{run_core, full_simple_deployment, conn_and_call_ipc,
                         send_update_contract, get_update_deltas_msg, contract_compute};
-pub extern crate enigma_core_app as app;
-extern crate serde;
-extern crate rustc_hex as hex;
-extern crate ethabi;
-
-use self::app::serde_json;
+use app::serde_json;
 use app::serde_json::*;
-use hex::ToHex;
-use integration_utils::cross_test_utils::{generate_contract_address};
+use rustc_hex::ToHex;
+use cross_test_utils::{generate_contract_address};
 use ethabi::Token::Uint;
 
 #[test]

@@ -1,20 +1,13 @@
-pub mod integration_utils;
-pub extern crate enigma_core_app as app;
-pub extern crate ethabi;
-extern crate rustc_hex as hex;
-extern crate cross_test_utils;
-extern crate enigma_types;
-
 use integration_utils::{conn_and_call_ipc, is_hex, run_core, get_msg_format_update_contract,
                         get_encryption_msg, full_simple_deployment, full_addition_compute, decrypt_output_to_uint,
                         send_update_contract, run_ptt_round, contract_compute, get_update_deltas_msg,
                         decrypt_addr_delta, encrypt_addr_delta, replace_previous_hash_in_delta_data};
 use cross_test_utils::generate_contract_address;
-use self::app::serde_json;
+use app::serde_json;
 use app::serde_json::*;
-use hex::{ToHex, FromHex};
-use integration_utils::ethabi::{Token};
-use integration_utils::enigma_crypto::{asymmetric::KeyPair, hash::Keccak256};
+use rustc_hex::{ToHex, FromHex};
+use ethabi::{Token};
+use enigma_crypto::{asymmetric::KeyPair, hash::Keccak256};
 
 #[test]
 fn test_new_task_encryption_key(){
