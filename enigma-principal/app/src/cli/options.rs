@@ -50,7 +50,7 @@ pub struct Opt {
 
     /// Optional: simulate blocks mining --mine <>
     #[structopt(short = "m", long = "mine", default_value = "0")]
-    pub mine: usize,
+    pub mine: u64,
 
     /// Optional: how many loops to perform (seconds) for the principal in time (TTL)
     #[structopt(short = "x", long = "time-to-live", default_value = "0")]

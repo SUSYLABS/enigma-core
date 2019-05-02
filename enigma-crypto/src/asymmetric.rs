@@ -37,7 +37,7 @@ impl KeyPair {
         pubarr[1..].copy_from_slice(&_pubarr[..]);
 
         let pubkey = PublicKey::parse(&pubarr)
-            .map_err(|e| CryptoError::KeyError { key_type: "Private Key", err: Some(e) })?;
+            .map_err(|e| CryptoError::KeyError { key_type: "Public Key", err: Some(e) })?;
 
         let shared = SharedSecret::new(&pubkey, &self.privkey)
             .map_err(|_| CryptoError::DerivingKeyError { self_key: self.get_pubkey(), other_key: *_pubarr })?;
