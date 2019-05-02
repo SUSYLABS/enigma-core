@@ -15,7 +15,7 @@ extern "C" {
 
 /// Returns an EpochState object containing the 32 bytes signed random seed and an incremented account nonce.
 /// # Examples
-/// ```
+/// ```ignore
 /// let enclave = esgx::general::init_enclave().unwrap();
 /// let result = self.contract.get_active_workers(block_number)?;
 /// let worker_params: InputWorkerParams = InputWorkerParams { block_number, workers: result.0, stakes: result.1 };
